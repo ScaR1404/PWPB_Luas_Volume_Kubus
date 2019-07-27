@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Luas &amp; Volume Balok</string>
+    <string name="luas">Luas Kubus</string>
+    <string name="volume">Volume Kubus</string>
+    <string name="inputRusuk">Masukkan Rusuk</string>
+    <string name="hitung">Hitung</string>
+    <string name="judul"><![CDATA[Luas & Volume Kubus]]></string>
+</resources>
