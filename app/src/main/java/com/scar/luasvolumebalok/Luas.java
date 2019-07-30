@@ -2,6 +2,8 @@ package com.scar.luasvolumebalok;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -33,6 +35,9 @@ public class Luas extends AppCompatActivity implements View.OnClickListener  {
 
     @Override
     public void onClick(View v){
+        Intent data = new Intent();
+        //EditText txtname =findViewById(R.id.idrusukl);
+
         if (v.getId() == R.id.bhitungl);
         String inputRusukl = eRusuk.getText().toString().trim();
 
@@ -53,6 +58,11 @@ public class Luas extends AppCompatActivity implements View.OnClickListener  {
             double luas = 6 * rusukl * rusukl;
             tHasil.setText(String.valueOf(luas));
         }
+
+        data.setData(Uri.parse(tHasil.getText().toString()));
+        setResult(RESULT_OK, data);
+
+        finish();
     }
 
     private Double toDouble(String str) {
